@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 public class MainActivity extends Activity {
 
-    // TODO: More to QuizModel and uncomment to create question bank
+    // TODO: Move to QuizModel and uncomment to create question bank
     // Create question bank using the Question class for each item in the array
 //    private Question[] mQuestionBank = new Question[] {
 //            new Question(R.string.question_1, true),
