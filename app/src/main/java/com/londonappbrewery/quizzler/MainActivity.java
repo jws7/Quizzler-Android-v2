@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 public class MainActivity extends Activity {
 
-    // TODO: Uncomment to create question bank
+    // TODO: More to QuizModel and uncomment to create question bank
     // Create question bank using the Question class for each item in the array
 //    private Question[] mQuestionBank = new Question[] {
 //            new Question(R.string.question_1, true),
@@ -22,10 +22,8 @@ public class MainActivity extends Activity {
 //            new Question(R.string.question_12, false),
 //    };
 
-    // TODO: Declare constants here
-
-
     // TODO: Declare member variables here:
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +37,11 @@ public class MainActivity extends Activity {
     }
 
 
-    // TODO: Add checkAnswer() method:
+    // TODO: Add feedbackOnAnswer() method:
 
 
 
-    // TODO: Add nextQuestion() method:
+    // TODO: Add goToNextQuestion() method:
 
 
 
@@ -51,5 +49,6 @@ public class MainActivity extends Activity {
 
 
 
+    // TODO: Save state during rotation
 
 }
