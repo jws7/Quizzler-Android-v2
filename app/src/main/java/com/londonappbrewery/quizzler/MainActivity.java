@@ -33,6 +33,23 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
+        //TODO: Configure buttons here:
+
 
     }
+
+
+    // TODO: Add checkAnswer() method:
+
+
+
+    // TODO: Add nextQuestion() method:
+
+
+
+    // TODO: Add updateScreen() method:
+
+
+
+
 }
