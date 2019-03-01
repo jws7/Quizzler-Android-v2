@@ -1,4 +1,4 @@
-package com.londonappbrewery.quizzler;
+package net.jws7.quizzler;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,10 +14,6 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    // TODO: Move to QuizModel and uncomment to create question bank
-
-
-    // TODO: Declare member variables here:
     private QuizModel mQuizModel = new QuizModel();
     private TextView mQuestionTextView;
     private ProgressBar mProgressBar;
@@ -29,12 +25,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mQuestionTextView = findViewById(R.id.question_text_view);
+        mProgressBar = findViewById(R.id.progress_bar);
+        mScoreTextView = findViewById(R.id.score);
 
-
-        //TODO: Configure buttons here:
         Button trueButton = findViewById(R.id.true_button);
         Button falseButton = findViewById(R.id.false_button);
-
 
         if(savedInstanceState != null){
             mQuizModel.setScore(savedInstanceState.getInt("scoreKey"));
@@ -76,24 +72,17 @@ public class MainActivity extends Activity {
 
         boolean isCorrect = mQuizModel.checkAnswer(false);
         if (isCorrect) {
-            String message = "You got it!"; // TODO - bring string from strings.xml
+            String message = Integer.toString(R.string.correct_toast);
             Log.d("Quizzler", message);
             mToastMessage = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
         } else {
-            String message = "Better luck next time!"; // TODO - bring string from strings.xml
+            String message = Integer.toString(R.string.incorrect_toast);
             Log.d("Quizzler", message);
             mToastMessage = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
         }
         mToastMessage.show();
     }
 
-
-
-    // TODO: Add goToNextQuestion() method:
-
-
-
-    // TODO: Add updateScreen() method:
     public void updateScreen(){
         Log.d("Quizzler", "updateScreen() method");
 
@@ -140,13 +129,9 @@ public class MainActivity extends Activity {
         }
     }
 
-
-    // TODO: Save state during rotation
     public void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
-
         outState.putInt("scoreKey", mQuizModel.getScore());
         outState.putInt("questionIndex", mQuizModel.getIndex());
     }
-
 }

@@ -1,4 +1,4 @@
-package com.londonappbrewery.quizzler;
+package net.jws7.quizzler;
 
 public class Question {
 

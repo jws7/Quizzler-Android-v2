@@ -1,6 +1,8 @@
-package com.londonappbrewery.quizzler;
+package net.jws7.quizzler;
 
 import android.util.Log;
+
+import net.jws7.quizzler.R;
 
 public class QuizModel {
 
